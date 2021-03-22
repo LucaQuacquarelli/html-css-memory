@@ -35,18 +35,22 @@ header > .title {
     font-size: 60px;
 }
 
+/* main */
 .game-container {
     width: 60%;
     margin: auto;
     padding: 20px 0 20px 22px;
 }
 
-.card, .view {
+.card, .hidden, .view {
     float: left;
     width: 100px;
     height: 120px;
-    margin: 15px 5px;
     border-radius: 10%;
+}
+
+.card, .view {
+    margin: 15px 5px;
 }
 
 .card {
@@ -54,21 +58,40 @@ header > .title {
     background-size: 100%;
 }
 
-.view {
+.hidden:hover{
     background-color: white;
-    padding: 10px 20px 30px 10px;
+
+}
+.show {
+    display: none;
+}
+.hidden:hover .show {
+    display: block;
 }
 
- img {
-     height: 100%;
- }
+.view {
+    background-color: white;
+}
+
+img {
+    height: 80%;
+}
  
- .namecard {
-     position: relative;
-     left: 8px;
-     font-size: 17px;
-     color: #E61986;
- }
+.namecard, .fix-namecard {
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+    font-size: 17px;
+    color: #E61986;
+}
+
+.namecard {
+    display: none;
+}
+
+ .hidden:hover .namecard {
+    display: block;
+}
 
 /* footer */
  footer {
